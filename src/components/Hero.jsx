@@ -73,7 +73,7 @@ export default function Hero() {
         >
           <video
             ref={videoRef}
-            src="/hero-video.mp4"
+            src={`${import.meta.env.BASE_URL}hero-video.mp4`}
             playsInline
             preload="metadata"
             className="w-full h-full object-cover object-[70%_center] md:object-center filter contrast-[1.02] brightness-[1.0]"

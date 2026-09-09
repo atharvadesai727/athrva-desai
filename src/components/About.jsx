@@ -145,7 +145,7 @@ export default function About() {
               {/* Developer Profile Picture */}
               <div className="relative w-full h-72 rounded-2xl overflow-hidden bg-neutral-900 border border-neutral-700 mb-5 shadow-inner group">
                 <img
-                  src="/profile.png"
+                  src={`${import.meta.env.BASE_URL}profile.png`}
                   alt="Siva Kunche Profile"
                   className="w-full h-full object-cover object-top filter contrast-[1.05] brightness-[0.98] transition-transform duration-500 group-hover:scale-105"
                 />

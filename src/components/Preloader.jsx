@@ -6,10 +6,10 @@ import { motion, AnimatePresence } from 'framer-motion';
  * Requirements:
  * - Fullscreen fixed overlay covering the entire viewport
  * - Background color: solid bright red (#ff2a2a)
- * - Centered logo text: "Siva Kunche."
+ * - Centered logo text: "Atharva Desai."
  * - Bold, premium, black-weight typography with tight letter spacing
  * - Animation Sequence:
- *   1. Dark transparent text "Siva Kunche." in center as background layer
+ *   1. Dark transparent text "Atharva Desai." in center as background layer
  *   2. White foreground version of same text positioned exactly above it
  *   3. Water-fill clip-path animation filling upward over 1.6s
  *   4. Smooth easing for a premium cinematic feel
@@ -57,7 +57,7 @@ export default function Preloader({ onComplete }) {
           >
             {/* Layer 1: Dark Transparent Background Layer */}
             <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tighter text-black/20 font-sans uppercase">
-              Siva Kunche.
+              Atharva Desai.
             </h1>
 
             {/* Layer 2: White Foreground Layer with Bottom-to-Top Water Fill */}
@@ -71,7 +71,7 @@ export default function Preloader({ onComplete }) {
               }}
               className="absolute inset-0 flex items-center justify-center text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tighter text-white font-sans uppercase pointer-events-none"
             >
-              Siva Kunche.
+              Atharva Desai.
             </motion.h1>
           </motion.div>
         </motion.div>

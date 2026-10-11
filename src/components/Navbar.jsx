@@ -14,6 +14,8 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const onDark = scrolled || mobileMenuOpen;
+
   const navLinks = [
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
@@ -48,10 +50,10 @@ export default function Navbar() {
           <a
             href="#home"
             onClick={(e) => handleScrollTo(e, '#home')}
-            className="group flex items-center gap-1.5 text-xl sm:text-2xl font-black tracking-tight font-sans text-white focus:outline-none z-10"
+            className={`group flex items-center gap-1.5 text-xl sm:text-2xl font-black tracking-tight font-sans ${onDark ? 'text-white' : 'text-black'} focus:outline-none z-10`}
           >
-            <span>Siva Kunche</span>
-            <span className="inline-block w-2 h-2 rounded-full bg-white group-hover:scale-125 transition-transform"></span>
+            <span>Atharva Desai</span>
+            <span className="inline-block w-2 h-2 rounded-full bg-[#FF2A2A] group-hover:scale-125 transition-transform"></span>
           </a>
 
           {/* Center Navigation (Desktop) */}
@@ -61,11 +63,11 @@ export default function Navbar() {
                 key={link.name}
                 href={link.href}
                 onClick={(e) => handleScrollTo(e, link.href)}
-                className="relative py-1 text-xs lg:text-sm font-medium text-white/90 hover:text-white transition-colors duration-200 tracking-wider uppercase group"
+                className={`relative py-1 text-xs lg:text-sm font-medium transition-colors duration-200 tracking-wider uppercase group ${onDark ? 'text-white/90 hover:text-white' : 'text-black/80 hover:text-black'}`}
               >
                 <span>{link.name}</span>
                 {/* Animated underline grows from left to right */}
-                <span className="absolute bottom-0 left-0 w-full h-[2px] bg-white scale-x-0 origin-left transition-transform duration-300 ease-out group-hover:scale-x-100" />
+                <span className="absolute bottom-0 left-0 w-full h-[2px] bg-[#FF2A2A] scale-x-0 origin-left transition-transform duration-300 ease-out group-hover:scale-x-100" />
               </a>
             ))}
           </nav>
@@ -75,7 +77,7 @@ export default function Navbar() {
             <a
               href="#contact"
               onClick={(e) => handleScrollTo(e, '#contact')}
-              className="relative group px-6 py-2.5 rounded-full text-xs font-semibold tracking-wider uppercase text-white bg-black/25 hover:bg-black/40 border border-white/30 hover:border-white/60 backdrop-blur-md transition-all duration-300 shadow-md flex items-center gap-2 overflow-hidden"
+              className={`relative group px-6 py-2.5 rounded-full text-xs font-semibold tracking-wider uppercase border backdrop-blur-md transition-all duration-300 shadow-md flex items-center gap-2 overflow-hidden ${onDark ? 'text-white bg-black/25 hover:bg-black/40 border-white/30 hover:border-white/60' : 'text-white bg-black hover:bg-neutral-800 border-black'}`}
             >
               <span className="relative z-10">Hire Me</span>
               <ArrowUpRight className="w-3.5 h-3.5 relative z-10 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -86,7 +88,7 @@ export default function Navbar() {
           <div className="flex md:hidden items-center">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-white/90 hover:text-white focus:outline-none rounded-lg bg-white/10 border border-white/20"
+              className={`p-2 focus:outline-none rounded-lg border ${onDark ? 'text-white/90 hover:text-white bg-white/10 border-white/20' : 'text-black bg-black/5 border-black/15'}`}
               aria-label="Toggle navigation menu"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -132,7 +134,9 @@ export default function Navbar() {
                 <ArrowUpRight className="w-4 h-4" />
               </a>
               <p className="text-center text-xs text-white/70 mt-4 font-mono">
-                sivakumche17@gmail.com
+                atharvadesai727@gmail.com
+                <br />
+                +91 76667 51319
               </p>
             </div>
           </motion.div>

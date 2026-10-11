@@ -1,63 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Sparkles, Terminal, Code2, Layers, Cpu, ShieldCheck } from 'lucide-react';
+
 
 /**
  * About Section
  * Requirements:
  * - Vibrant red (#FF2A2A) background
  * - Left: Hanging developer ID badge with black lanyard strap & metal clip, -3 deg tilt, profile photo
- * - Right: Bold black "Hello!", name "SIVA KUNCHE", Full Stack Developer in Progress / Learner
- * - Tech skills: Python, HTML, CSS, JavaScript logos displayed horizontally with floating effect
  * - Abstract black star icons floating with soft pulse animation
  * - Bottom divider: Large organic torn-paper SVG transition in white
  */
 export default function About() {
-  const techStack = [
-    {
-      name: 'Python',
-      level: 'Core Language',
-      icon: (
-        <svg viewBox="0 0 128 128" className="w-12 h-12">
-          <path fill="#ffffff" d="M63.7 1.8c-15.6 0-25 6.7-25 19.3v14.4h25.4v3.6H17.8C7.1 39.1 0 46.2 0 61.5c0 15.5 8.9 22.8 21.6 22.8h11.2V72.9c0-10.4 8.7-18.9 19.4-18.9h25.2c8.6 0 15.5-7.1 15.5-15.7V21.1c0-11.8-9.4-19.3-29.2-19.3zm-11 11.2a5.4 5.4 0 1 1 0 10.8 5.4 5.4 0 0 1 0-10.8z"/>
-          <path fill="#ffffff" d="M110.2 43.7H99v11.4c0 10.4-8.7 18.9-19.4 18.9H54.4c-8.6 0-15.5 7.1-15.5 15.7v17.2c0 11.8 9.4 19.3 29.2 19.3 15.6 0 25-6.7 25-19.3V92.8H67.7v-3.6h46.3c10.7 0 14-7.6 14-22.7 0-15.5-6.7-22.8-17.8-22.8zm-35.9 71.3a5.4 5.4 0 1 1 0-10.8 5.4 5.4 0 0 1 0 10.8z"/>
-        </svg>
-      )
-    },
-    {
-      name: 'HTML5',
-      level: 'Semantic Structure',
-      icon: (
-        <svg viewBox="0 0 512 512" className="w-12 h-12">
-          <path fill="#ffffff" d="M71.4 461.5l-35.8-401.5h440.8l-35.8 401.4-184.6 51.2-184.6-51.1z"/>
-          <path fill="#000000" opacity="0.2" d="M256 472.4l150.9-41.8 30.6-343H256v384.8z"/>
-          <path fill="#FF2A2A" d="M256 182.2h81.3l-5.6 62.6H256v54.8h71.4l-6.8 76.5-64.6 17.5v57.1l119.7-33.2 16.5-185.1H256v-50.2zm-81.3 0h81.3v-50.2H168.9l2.8 31.4 13.9 155.8 70.4 19.5v-57.1l-40-11-2.6-29.2h42.6v-54.8h-74.9l-2.8-55.4z"/>
-        </svg>
-      )
-    },
-    {
-      name: 'CSS3',
-      level: 'Modern Styling',
-      icon: (
-        <svg viewBox="0 0 512 512" className="w-12 h-12">
-          <path fill="#ffffff" d="M71.4 461.5l-35.8-401.5h440.8l-35.8 401.4-184.6 51.2-184.6-51.1z"/>
-          <path fill="#000000" opacity="0.2" d="M256 472.4l150.9-41.8 30.6-343H256v384.8z"/>
-          <path fill="#FF2A2A" d="M256 182.2h81.3l-5.6 62.6H256v54.8h71.4l-6.8 76.5-64.6 17.5v57.1l119.7-33.2 16.5-185.1H256v-50.2zm-81.3 0h81.3v-50.2H168.9l2.8 31.4 13.9 155.8 70.4 19.5v-57.1l-40-11-2.6-29.2h42.6v-54.8h-74.9l-2.8-55.4z"/>
-        </svg>
-      )
-    },
-    {
-      name: 'JavaScript',
-      level: 'Interactive Logic',
-      icon: (
-        <svg viewBox="0 0 512 512" className="w-12 h-12">
-          <rect width="512" height="512" rx="64" fill="#ffffff" />
-          <path fill="#000000" d="M292.5 350.5c7.8 13.5 18 24.2 36.3 24.2 15.3 0 25.1-7.7 25.1-18.4 0-12.8-10.2-17.4-27.3-24.8l-9.4-4c-27.1-11.5-45.1-26-45.1-57.5 0-28.7 22.4-50.6 57.5-50.6 24.8 0 42.6 9.8 55.4 32.7l-25.1 16.1c-5.5-9.8-12.8-14.7-22.4-14.7-10.7 0-17.4 6.9-17.4 15.5 0 10.7 6.9 15.5 22.4 22.1l9.4 4c31.9 13.5 50.8 27.3 50.8 60 0 34.3-27.1 53.6-64.4 53.6-36.1 0-58.7-17.4-69.6-38.3l23.9-14.7zm-143.8 2.7c4.6 8 8.7 14.7 18.6 14.7 10 0 16.5-4.2 16.5-20.5v-123h32.1v124.5c0 33.2-19.3 48.6-47.8 48.6-25.8 0-41.2-13.3-48.9-29.2l29.5-15.1z" />
-        </svg>
-      )
-    }
-  ];
-
   return (
     <section 
       id="about" 
@@ -97,7 +50,7 @@ export default function About() {
       <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           
-          {/* LEFT COLUMN: Suspended Developer ID Badge */}
+          {/* LEFT COLUMN: Suspended ID Badge */}
           <div className="lg:col-span-5 flex flex-col items-center relative">
             
             {/* Hanging Lanyard Strap Coming From Top */}
@@ -113,7 +66,7 @@ export default function About() {
               <div className="w-4 h-6 bg-gradient-to-b from-neutral-200 to-neutral-400 rounded-sm shadow-md border border-neutral-500 -mt-1"></div>
             </div>
 
-            {/* Developer ID Pass Card */}
+            {/* ID Pass Card */}
             <motion.div
               initial={{ rotate: -3 }}
               whileHover={{ 
@@ -134,7 +87,7 @@ export default function About() {
                 <div className="flex items-center gap-2">
                   <div className="w-2.5 h-2.5 rounded-full bg-[#FF2A2A] animate-pulse"></div>
                   <span className="font-mono text-[11px] uppercase tracking-widest text-neutral-300 font-bold">
-                    DEV PASS 2026
+                    COPY PASS 2026
                   </span>
                 </div>
                 <span className="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-white/10 text-neutral-300">
@@ -145,9 +98,9 @@ export default function About() {
               {/* Developer Profile Picture */}
               <div className="relative w-full h-72 rounded-2xl overflow-hidden bg-neutral-900 border border-neutral-700 mb-5 shadow-inner group">
                 <img
-                  src={`${import.meta.env.BASE_URL}profile.png`}
-                  alt="Siva Kunche Profile"
-                  className="w-full h-full object-cover object-top filter contrast-[1.05] brightness-[0.98] transition-transform duration-500 group-hover:scale-105"
+                  src={`${import.meta.env.BASE_URL}profile.jpeg`}
+                  alt="Atharva Desai"
+                  className="w-full h-full object-cover object-center filter contrast-[1.05] brightness-[0.98] transition-transform duration-500 group-hover:scale-105"
                 />
                 
                 {/* Holographic Badge Watermark */}
@@ -157,8 +110,8 @@ export default function About() {
 
                 {/* Bottom Overlay Info inside photo */}
                 <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent p-3 pt-6">
-                  <span className="text-[10px] font-mono tracking-widest text-[#FF2A2A] uppercase block">Full Stack Learner</span>
-                  <span className="text-sm font-bold text-white uppercase tracking-tight">Siva Kunche</span>
+                  <span className="text-[10px] font-mono tracking-widest text-[#FF2A2A] uppercase block">Copywriter</span>
+                  <span className="text-sm font-bold text-white uppercase tracking-tight">Atharva Desai</span>
                 </div>
               </div>
 
@@ -166,15 +119,15 @@ export default function About() {
               <div className="space-y-3 pt-1">
                 <div className="flex justify-between items-center text-xs font-mono">
                   <span className="text-neutral-400">ROLE:</span>
-                  <span className="text-white font-bold tracking-wide">BUILDER / DEV IN PROGRESS</span>
+                  <span className="text-white font-bold tracking-wide">COPYWRITER</span>
                 </div>
                 <div className="flex justify-between items-center text-xs font-mono">
                   <span className="text-neutral-400">FOCUS:</span>
-                  <span className="text-white font-bold">PYTHON & MODERN WEB</span>
+                  <span className="text-white font-bold">ADS, WEB COPY & BIOS</span>
                 </div>
                 <div className="flex justify-between items-center text-xs font-mono">
                   <span className="text-neutral-400">ISSUED:</span>
-                  <span className="text-neutral-300">2026 • AUTONOMOUS</span>
+                  <span className="text-neutral-300">2026</span>
                 </div>
 
                 {/* Simulated Barcode */}
@@ -184,7 +137,7 @@ export default function About() {
                       <div key={i} className="h-full bg-white" style={{ width: `${w}px` }}></div>
                     ))}
                   </div>
-                  <span className="font-mono text-[9px] text-neutral-400">SK-2026-DEV</span>
+                  <span className="font-mono text-[9px] text-neutral-400">AD-2026-COPY</span>
                 </div>
               </div>
             </motion.div>
@@ -207,45 +160,17 @@ export default function About() {
             {/* Narrative Paragraphs */}
             <div className="space-y-5 text-white text-lg sm:text-xl leading-relaxed max-w-2xl font-normal">
               <p>
-                I'm <strong className="font-black text-black uppercase tracking-wider text-xl sm:text-2xl bg-white/20 px-2 py-0.5 rounded">SIVA KUNCHE</strong>, 
-                an aspiring software engineer and dedicated <span className="font-bold text-white underline decoration-black decoration-2">Full Stack Developer in Progress</span>.
+                Hey there! I'm <strong className="font-black text-black uppercase tracking-wider text-xl sm:text-2xl bg-white/20 px-2 py-0.5 rounded">ATHARVA DESAI</strong>,
+                a <span className="font-bold text-white underline decoration-black decoration-2">copywriter</span> who loves creating words that work. Whether it's an ad, website copy, or a simple bio, I write to connect and convert. While I enjoy writing copy for brands, I also dabble in content writing.
               </p>
 
               <p className="text-white/95">
-                Rather than claiming decades of corporate industry tenure, I bring relentless curiosity, rapid hands-on execution, and a fresh perspective to building responsive, scalable, and dynamic web applications from the ground up.
+                When I'm not playing with words, you'll probably find me on the field, playing football because hey, all work and no play makes Jack a dull boy.
               </p>
 
               <p className="text-white/90 text-base sm:text-lg">
-                I spend my days mastering modern frontend interaction paradigms with React and JavaScript, crafting resilient server logic with Python, and writing clean, accessible semantic HTML & CSS.
+                I love exploring, be it diverse cultures, perspectives, or stories. Experiencing different places helps me understand how people think, speak, and engage. This has helped me a lot in my copywriting journey. This deeper understanding of the common folk, the main viewers of ads, has allowed me to write in a way that ensures my words connect with them.
               </p>
-            </div>
-
-            {/* Technology Skills Header */}
-            <div className="mt-10 pt-8 border-t border-black/20">
-              <span className="block font-mono text-xs uppercase tracking-[0.25em] text-black font-bold mb-6">
-                CORE TECHNICAL COMPETENCIES
-              </span>
-
-              {/* Horizontal Technology Logos Display */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-                {techStack.map((tech, idx) => (
-                  <motion.div
-                    key={tech.name}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.1 * idx, duration: 0.6 }}
-                    whileHover={{ y: -8, scale: 1.05 }}
-                    className="p-4 rounded-2xl bg-black/25 hover:bg-black/40 border border-white/15 backdrop-blur-sm transition-all duration-300 flex flex-col items-center text-center shadow-lg group cursor-pointer"
-                  >
-                    <div className="mb-3 text-white drop-shadow-md group-hover:scale-110 transition-transform">
-                      {tech.icon}
-                    </div>
-                    <span className="font-bold text-white text-sm tracking-wide">{tech.name}</span>
-                    <span className="text-[11px] text-white/70 font-mono mt-0.5">{tech.level}</span>
-                  </motion.div>
-                ))}
-              </div>
             </div>
 
           </div>

@@ -4,11 +4,10 @@ import { ArrowUpRight, Heart } from 'lucide-react';
 
 export default function Footer() {
   const services = [
-    'Python Development',
-    'Full Stack Development',
-    'Web Development',
-    'UI/UX Design',
-    'Problem Solving'
+    'Ad Copywriting',
+    'Website Copy',
+    'Bios & Brand Voice',
+    'Content Writing'
   ];
 
   const handleScrollToTop = (e) => {
@@ -53,7 +52,7 @@ export default function Footer() {
               Current Arc
             </span>
             <p className="text-xl sm:text-2xl font-bold font-sans tracking-tight text-white max-w-xs">
-              Full Stack Developer in Progress
+              Copywriter
             </p>
             <a
               href="#process"
@@ -72,10 +71,10 @@ export default function Footer() {
               Status & Ethos
             </span>
             <p className="text-base font-semibold text-white tracking-wide">
-              Building. Learning. Creating.
+              Writing. Exploring. Connecting.
             </p>
             <p className="text-xs font-mono text-white/60">
-              Autonomous Growth Cycle
+              Words that work
             </p>
             <span className="inline-block px-3 py-1 rounded-full bg-white/10 font-mono text-xs text-white/90 mt-2 border border-white/15">
               Current Year: 2026
@@ -97,7 +96,7 @@ export default function Footer() {
               Personal Signature & Brand
             </span>
             <h2 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black font-sans tracking-tighter leading-none text-[#F4F4F4] transition-all duration-500 select-none group-hover:text-white group-hover:drop-shadow-[0_0_40px_rgba(255,42,42,0.4)] flex items-center justify-center gap-1.5 sm:gap-2">
-              <span>Siva Kunche</span>
+              <span>Atharva Desai</span>
               <span className="inline-block w-2.5 h-2.5 sm:w-3.5 sm:h-3.5 rounded-full bg-[#FF2A2A] group-hover:scale-125 transition-transform duration-300"></span>
             </h2>
           </motion.div>
@@ -108,19 +107,25 @@ export default function Footer() {
           
           {/* Left: Contact link & Copyright */}
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 text-white/60">
-            <span>© 2026 Siva Kunche.</span>
+            <span>© 2026 Atharva Desai.</span>
             <span className="hidden sm:inline">•</span>
-            <span className="text-white/40">Built with React & Framer Motion</span>
+            <span className="text-white/40">Atharva Desai Portfolio</span>
           </div>
 
           {/* Center: Email Link */}
           <div className="text-left md:text-center">
             <a 
-              href="mailto:sivakumche17@gmail.com"
+              href="mailto:atharvadesai727@gmail.com"
               className="text-white hover:text-[#FF2A2A] text-sm sm:text-base font-semibold transition-colors duration-300 relative inline-block group"
             >
-              <span>sivakumche17@gmail.com</span>
+              <span>atharvadesai727@gmail.com</span>
               <span className="absolute bottom-0 left-0 w-full h-[1.5px] bg-[#FF2A2A] scale-x-100 group-hover:scale-x-110 transition-transform origin-center"></span>
+            </a>
+            <a
+              href="tel:+917666751319"
+              className="block mt-2 text-white/80 hover:text-[#FF2A2A] text-sm transition-colors duration-300"
+            >
+              +91 76667 51319
             </a>
           </div>
 

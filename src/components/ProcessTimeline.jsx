@@ -9,42 +9,42 @@ export default function ProcessTimeline() {
     {
       num: '01',
       title: 'Define',
-      subtitle: 'Discovery & Architecture Planning',
+      subtitle: 'Brief & Research',
       side: 'right', // Top right
       rotation: 'rotate-2',
       hoverRotation: 'hover:rotate-0',
       icon: <Compass className="w-6 h-6" />,
-      desc: 'Deep-dive discovery session to align technical specifications, define component hierarchies, design schemas, and set the performance benchmarks.'
+      desc: 'Understanding the brand, the audience, and the goal behind the words, so every line has a purpose.'
     },
     {
       num: '02',
       title: 'Design',
-      subtitle: 'UI/UX & High-End Interactions',
+      subtitle: 'Concepts & Voice',
       side: 'left', // Left side
       rotation: '-rotate-2',
       hoverRotation: 'hover:rotate-0',
       icon: <Palette className="w-6 h-6" />,
-      desc: 'Crafting pixel-perfect design systems, fluid responsive layouts, micro-interactions, and accessible typography inspired by top design studios.'
+      desc: 'Shaping the big idea, tone, and hooks that make the brand sound like itself and stick with people.'
     },
     {
       num: '03',
       title: 'Build',
-      subtitle: 'Modern Clean Code Engineering',
+      subtitle: 'Writing & Refining',
       side: 'right', // Right side
       rotation: 'rotate-2',
       hoverRotation: 'hover:rotate-0',
       icon: <Code className="w-6 h-6" />,
-      desc: 'Developing resilient modular code using React, Tailwind CSS, Python API backends, and Framer Motion transitions with rigorous attention to speed.'
+      desc: 'Drafting ads, website copy, and bios, then tightening every word until it connects and converts.'
     },
     {
       num: '04',
       title: 'Launch',
-      subtitle: 'Optimization & Global Deployment',
+      subtitle: 'Delivery & Iteration',
       side: 'left', // Bottom left
       rotation: '-rotate-2',
       hoverRotation: 'hover:rotate-0',
       icon: <Rocket className="w-6 h-6" />,
-      desc: 'End-to-end lighthouse audits, cross-browser validation, SEO optimization, and seamless continuous deployment to production clouds.'
+      desc: 'Final polish, clean handoff, and revisions based on feedback and results.'
     }
   ];
 

@@ -160,16 +160,20 @@ export default function About() {
             {/* Narrative Paragraphs */}
             <div className="space-y-5 text-white text-lg sm:text-xl leading-relaxed max-w-2xl font-normal">
               <p>
-                Hey there! I'm <strong className="font-black text-black uppercase tracking-wider text-xl sm:text-2xl bg-white/20 px-2 py-0.5 rounded">ATHARVA DESAI</strong>,
-                a <span className="font-bold text-white underline decoration-black decoration-2">copywriter</span> who loves creating words that work. Whether it's an ad, website copy, or a simple bio, I write to connect and convert. While I enjoy writing copy for brands, I also dabble in content writing.
+                Hey, I'm <strong className="font-black text-black uppercase tracking-wider text-xl sm:text-2xl bg-white/20 px-2 py-0.5 rounded">ATHARVA</strong>,
+                a <span className="font-bold text-white underline decoration-black decoration-2">professional overthinker</span> who happens to write copy.
               </p>
 
               <p className="text-white/95">
-                When I'm not playing with words, you'll probably find me on the field, playing football because hey, all work and no play makes Jack a dull boy.
+                Forget the usual talk about creative campaigns and amazing ads. I'm here to convince you that somewhere in this ever-expanding universe, there might be an entire planet where people overthink more than I do. And honestly, I'd love to meet them. We'd have a lot to talk about. Probably too much.
               </p>
 
               <p className="text-white/90 text-base sm:text-lg">
-                I love exploring, be it diverse cultures, perspectives, or stories. Experiencing different places helps me understand how people think, speak, and engage. This has helped me a lot in my copywriting journey. This deeper understanding of the common folk, the main viewers of ads, has allowed me to write in a way that ensures my words connect with them.
+                Until then, I write words for a living, question things I probably shouldn't, and occasionally turn all that mental chaos into something creative.
+              </p>
+
+              <p className="text-white/90 text-base sm:text-lg">
+                Welcome to my little corner of the internet. Try not to overthink it. I already did.
               </p>
             </div>
 

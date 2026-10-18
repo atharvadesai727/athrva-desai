@@ -20,8 +20,8 @@ export default function App() {
   }, [preloaderComplete]);
 
   return (
-    <div className="relative min-h-screen bg-[#111111] text-white selection:bg-[#FF2A2A] selection:text-white font-sans antialiased overflow-x-hidden">
-      {/* 1. Fullscreen Red Framer Motion Preloader */}
+    <div className="relative min-h-screen bg-cream text-ink selection:bg-sun selection:text-ink font-sans antialiased overflow-x-hidden">
+      {/* 1. Fullscreen video preloader */}
       <Preloader onComplete={() => setPreloaderComplete(true)} />
 
       {/* 2. Floating Navbar */}
@@ -35,7 +35,7 @@ export default function App() {
         <ProcessTimeline />
       </main>
 
-      {/* 4. Luxury Dark Footer */}
+      {/* 4. Footer */}
       <Footer />
     </div>
   );

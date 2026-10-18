@@ -7,27 +7,20 @@ export default {
   theme: {
     extend: {
       colors: {
-        brand: {
-          red: '#FF2A2A',
-          dark: '#111111',
-          black: '#0a0a0a',
-          card: '#161616',
-          muted: '#888888',
-          border: 'rgba(255, 255, 255, 0.12)'
-        }
+        // One playful palette for the whole page
+        cream: '#FFF4E0',   // page background
+        sun: '#FFD23F',     // sunny yellow highlight
+        accent: '#FF2A2A',  // brand red
+        ink: '#1A1A1A'      // text and outlines
       },
       fontFamily: {
-        sans: ['"Space Grotesk"', 'Inter', 'system-ui', 'sans-serif'],
-        display: ['"Syne"', '"Cabinet Grotesk"', 'sans-serif'],
-        mono: ['"JetBrains Mono"', 'monospace'],
-        serif: ['"Playfair Display"', 'serif'],
-        handwritten: ['"Caveat"', '"Permanent Marker"', 'cursive']
+        sans: ['"Space Grotesk"', 'system-ui', 'sans-serif'],
+        display: ['"Fredoka"', '"Space Grotesk"', 'system-ui', 'sans-serif']
       },
       boxShadow: {
-        'glow-red': '0 0 35px -5px rgba(255, 42, 42, 0.65)',
-        'glow-red-lg': '0 0 60px -10px rgba(255, 42, 42, 0.8)',
-        'luxury': '0 25px 50px -12px rgba(0, 0, 0, 0.45)',
-        'badge': '0 30px 60px -15px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.1)'
+        // Hard, offset "sticker" shadows
+        pop: '4px 4px 0 0 #1A1A1A',
+        'pop-lg': '7px 7px 0 0 #1A1A1A'
       }
     },
   },

@@ -51,7 +51,7 @@ export default function ProcessTimeline() {
   return (
     <section 
       id="process" 
-      className="relative w-full bg-white text-black py-28 px-6 sm:px-8 lg:px-12 bg-grid-pattern overflow-hidden select-none"
+      className="relative w-full bg-cream text-ink py-28 px-6 sm:px-8 lg:px-12 bg-dots border-b-2 border-ink overflow-hidden select-none"
     >
       <div className="max-w-6xl mx-auto relative">
         
@@ -62,9 +62,9 @@ export default function ProcessTimeline() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-black/10 bg-neutral-50 shadow-sm text-xs font-mono uppercase tracking-widest text-black/70 mb-5"
+            className="section-badge mb-5"
           >
-            <span className="w-2 h-2 rounded-full bg-[#FF2A2A]" />
+            <span className="w-2 h-2 rounded-full bg-accent" />
             <span>How we work</span>
           </motion.div>
 
@@ -74,7 +74,7 @@ export default function ProcessTimeline() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight font-sans text-black leading-tight mb-6"
+            className="section-title text-4xl sm:text-5xl lg:text-6xl mb-6"
           >
             Let us show you how we drive your brand to new heights
           </motion.h2>
@@ -85,17 +85,17 @@ export default function ProcessTimeline() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-base sm:text-lg text-neutral-600 leading-relaxed"
+            className="text-base sm:text-lg text-ink/80 font-medium leading-relaxed"
           >
             A structured, iterative workflow engineered to turn bold concepts into fast, interactive, and memorable digital experiences.
           </motion.p>
 
           {/* Hand-drawn Sketch Arrow Beside Heading */}
-          <div className="hidden lg:block absolute -right-16 top-10 pointer-events-none transform rotate-12 text-[#FF2A2A]">
+          <div className="hidden xl:block absolute -right-28 -top-6 pointer-events-none transform rotate-12 text-accent">
             <svg width="84" height="60" viewBox="0 0 100 70" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
               <path d="M10,15 C35,5 65,15 85,45 M85,45 L70,42 M85,45 L80,30" />
             </svg>
-            <span className="font-handwritten text-lg font-bold text-black -ml-4 block">Follow the path</span>
+            <span className="eyebrow !text-ink -ml-4 block">Follow the path</span>
           </div>
         </div>
 
@@ -107,10 +107,10 @@ export default function ProcessTimeline() {
                  C 720,120 720,240 400,320 
                  C 80,400 80,560 400,640 
                  C 720,720 720,860 400,950"
-              stroke="#222222"
+              stroke="#1A1A1A"
               strokeWidth="2.5"
               strokeDasharray="8 8"
-              className="opacity-70"
+              className="opacity-40"
             />
           </svg>
         </div>
@@ -135,68 +135,68 @@ export default function ProcessTimeline() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-                  whileHover={{ scale: 1.03 }}
-                  className={`w-full md:w-[460px] rounded-[2rem] p-8 md:p-10 transition-all duration-500 cursor-pointer relative shadow-xl ${
+                  whileHover={{ scale: 1.03, rotate: 0 }}
+                  className={`w-full md:w-[460px] rounded-[2rem] p-8 md:p-10 transition-all duration-300 cursor-pointer relative ${
                     step.rotation
                   } ${step.hoverRotation} ${
                     isActive
-                      ? 'bg-[#FF2A2A] text-white shadow-glow-red'
-                      : 'bg-white text-black border border-neutral-200 hover:border-[#FF2A2A]/40'
+                      ? 'bg-accent text-white border-2 border-ink shadow-pop-lg'
+                      : 'bg-white text-ink border-2 border-ink shadow-pop hover:shadow-pop-lg'
                   }`}
                 >
                   {/* Luggage Tag / Conference Badge Eyelet Hole Punch Detail */}
                   <div className="flex items-center justify-center -mt-4 mb-6">
                     <div className={`w-8 h-8 rounded-full border-2 flex items-center justify-center shadow-inner ${
-                      isActive ? 'border-white/40 bg-black/20' : 'border-neutral-300 bg-neutral-100'
+                      isActive ? 'border-ink bg-sun' : 'border-ink bg-cream'
                     }`}>
                       <div className={`w-3.5 h-3.5 rounded-full ${
-                        isActive ? 'bg-white' : 'bg-neutral-300'
+                        isActive ? 'bg-ink' : 'bg-ink/30'
                       }`} />
                     </div>
                   </div>
 
                   {/* Step Number & Category Icon */}
                   <div className="flex items-baseline justify-between mb-4">
-                    <span className={`font-serif italic font-bold text-4xl sm:text-5xl tracking-tight transition-colors ${
-                      isActive ? 'text-black/30' : 'text-neutral-300'
+                    <span className={`font-display font-bold text-5xl sm:text-6xl tracking-tight transition-colors ${
+                      isActive ? 'text-white' : 'text-ink/20'
                     }`}>
                       {step.num}
                     </span>
                     <div className={`p-3 rounded-2xl transition-colors ${
-                      isActive ? 'bg-black/20 text-white' : 'bg-neutral-100 text-black'
+                      isActive ? 'bg-white text-accent border-2 border-ink' : 'bg-sun text-ink border-2 border-ink'
                     }`}>
                       {step.icon}
                     </div>
                   </div>
 
                   {/* Card Title */}
-                  <h3 className={`text-2xl sm:text-3xl font-black font-sans tracking-tight mb-2 ${
-                    isActive ? 'text-white' : 'text-black'
+                  <h3 className={`text-3xl sm:text-4xl font-bold tracking-tight mb-2 ${
+                    isActive ? 'text-white' : 'text-ink'
                   }`}>
                     {step.title}
                   </h3>
 
                   {/* Card Subtitle */}
-                  <span className={`block text-xs font-mono uppercase tracking-wider mb-4 ${
-                    isActive ? 'text-white/80' : 'text-[#FF2A2A] font-semibold'
+                  <span className={`block text-xs font-bold uppercase tracking-wider mb-4 ${
+                    isActive ? 'text-white' : 'text-accent'
                   }`}>
                     {step.subtitle}
                   </span>
 
                   {/* Card Description */}
                   <p className={`text-sm sm:text-base leading-relaxed ${
-                    isActive ? 'text-white/90' : 'text-neutral-600'
+                    isActive ? 'text-white' : 'text-ink/80'
                   }`}>
                     {step.desc}
                   </p>
 
                   {/* Interactive Status Indicator */}
-                  <div className="mt-6 pt-4 border-t border-current/10 flex items-center justify-between text-xs font-mono">
-                    <span className={isActive ? 'text-white/80' : 'text-neutral-400'}>
+                  <div className="mt-6 pt-4 border-t-2 border-current/15 flex items-center justify-between text-xs">
+                    <span className={isActive ? 'text-white' : 'text-ink/60'}>
                       STAGE {step.num} OF 04
                     </span>
                     <span className={`inline-flex items-center gap-1 font-bold ${
-                      isActive ? 'text-white' : 'text-neutral-700'
+                      isActive ? 'text-white' : 'text-ink'
                     }`}>
                       {isActive ? 'CURRENTLY ACTIVE' : 'TAP TO INSPECT'}
                     </span>
@@ -207,18 +207,18 @@ export default function ProcessTimeline() {
           })}
         </div>
 
-        {/* Bottom Section: Handwritten Text */}
+        {/* Bottom sticker */}
         <div className="text-center pt-16 pb-8">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="inline-block transform -rotate-2"
+            className="inline-block transform -rotate-2 bg-sun border-2 border-ink shadow-pop-lg rounded-2xl px-6 py-4"
           >
-            <span className="font-handwritten text-4xl sm:text-5xl font-black text-black tracking-wide relative">
+            <span className="font-display text-3xl sm:text-5xl font-bold text-ink tracking-tight relative">
               "Ready to be delivered!"
-              {/* Hand-drawn underline squiggle */}
-              <svg className="w-full h-4 text-[#FF2A2A] absolute -bottom-3 left-0" viewBox="0 0 200 15" fill="none" stroke="currentColor" strokeWidth="3">
+              {/* Squiggle underline */}
+              <svg className="w-full h-4 text-accent absolute -bottom-3 left-0" viewBox="0 0 200 15" fill="none" stroke="currentColor" strokeWidth="3">
                 <path d="M5,10 Q 50,2 100,10 T 195,8" strokeLinecap="round" />
               </svg>
             </span>

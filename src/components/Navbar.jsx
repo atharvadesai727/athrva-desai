@@ -14,7 +14,9 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const onDark = scrolled || mobileMenuOpen;
+  // Light text over the dark hero video, ink text once the header turns cream
+  const overVideo = !scrolled && !mobileMenuOpen;
+  const textTone = overVideo ? 'text-white' : 'text-ink';
 
   const navLinks = [
     { name: 'Home', href: '#home' },
@@ -41,7 +43,7 @@ export default function Navbar() {
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled
-            ? 'py-3.5 bg-[#111111]/90 backdrop-blur-md border-b border-white/10 shadow-2xl'
+            ? 'py-3.5 bg-cream/95 backdrop-blur-md border-b-2 border-ink'
             : 'py-6 bg-transparent'
         }`}
       >
@@ -50,10 +52,10 @@ export default function Navbar() {
           <a
             href="#home"
             onClick={(e) => handleScrollTo(e, '#home')}
-            className={`group flex items-center gap-1.5 text-xl sm:text-2xl font-black tracking-tight font-sans ${onDark ? 'text-white' : 'text-black'} focus:outline-none z-10`}
+            className={`group flex items-center gap-1.5 text-xl sm:text-2xl font-display font-bold tracking-tight ${textTone} focus:outline-none z-10`}
           >
             <span>Atharva Desai</span>
-            <span className="inline-block w-2 h-2 rounded-full bg-[#FF2A2A] group-hover:scale-125 transition-transform"></span>
+            <span className="inline-block w-2.5 h-2.5 rounded-full bg-accent group-hover:scale-150 transition-transform"></span>
           </a>
 
           {/* Center Navigation (Desktop) */}
@@ -63,11 +65,11 @@ export default function Navbar() {
                 key={link.name}
                 href={link.href}
                 onClick={(e) => handleScrollTo(e, link.href)}
-                className={`relative py-1 text-xs lg:text-sm font-medium transition-colors duration-200 tracking-wider uppercase group ${onDark ? 'text-white/90 hover:text-white' : 'text-black/80 hover:text-black'}`}
+                className={`relative py-1 text-xs lg:text-sm font-bold transition-colors duration-200 tracking-wider uppercase group ${textTone}`}
               >
                 <span>{link.name}</span>
-                {/* Animated underline grows from left to right */}
-                <span className="absolute bottom-0 left-0 w-full h-[2px] bg-[#FF2A2A] scale-x-0 origin-left transition-transform duration-300 ease-out group-hover:scale-x-100" />
+                {/* Underline grows from left to right */}
+                <span className="absolute bottom-0 left-0 w-full h-[3px] rounded-full bg-sun scale-x-0 origin-left transition-transform duration-300 ease-out group-hover:scale-x-100" />
               </a>
             ))}
           </nav>
@@ -77,10 +79,10 @@ export default function Navbar() {
             <a
               href="#contact"
               onClick={(e) => handleScrollTo(e, '#contact')}
-              className={`relative group px-6 py-2.5 rounded-full text-xs font-semibold tracking-wider uppercase border backdrop-blur-md transition-all duration-300 shadow-md flex items-center gap-2 overflow-hidden ${onDark ? 'text-white bg-black/25 hover:bg-black/40 border-white/30 hover:border-white/60' : 'text-white bg-black hover:bg-neutral-800 border-black'}`}
+              className="btn-primary group !px-6 !py-2.5 !text-xs"
             >
-              <span className="relative z-10">Hire Me</span>
-              <ArrowUpRight className="w-3.5 h-3.5 relative z-10 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              <span>Hire Me</span>
+              <ArrowUpRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </a>
           </div>
 
@@ -88,7 +90,7 @@ export default function Navbar() {
           <div className="flex md:hidden items-center">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className={`p-2 focus:outline-none rounded-lg border ${onDark ? 'text-white/90 hover:text-white bg-white/10 border-white/20' : 'text-black bg-black/5 border-black/15'}`}
+              className="p-2 focus:outline-none rounded-xl border-2 border-ink bg-sun text-ink shadow-pop"
               aria-label="Toggle navigation menu"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -105,10 +107,10 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: '-100%' }}
             transition={{ duration: 0.4, ease: [0.76, 0, 0.24, 1] }}
-            className="fixed inset-0 z-40 bg-[#FF2A2A] text-white flex flex-col justify-between p-8 pt-28 md:hidden"
+            className="fixed inset-0 z-40 bg-sun text-ink flex flex-col justify-between p-8 pt-28 md:hidden"
           >
             <div className="space-y-6 flex flex-col items-start">
-              <span className="text-xs uppercase tracking-widest text-white/70 font-mono">Navigation</span>
+              <span className="eyebrow">Navigation</span>
               {navLinks.map((link, idx) => (
                 <motion.a
                   key={link.name}
@@ -117,23 +119,23 @@ export default function Navbar() {
                   initial={{ opacity: 0, x: -30 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.1 + idx * 0.05 }}
-                  className="text-4xl font-black uppercase tracking-tight text-white hover:text-black transition-colors"
+                  className="text-4xl font-display font-bold uppercase tracking-tight text-ink hover:text-accent transition-colors"
                 >
                   {link.name}
                 </motion.a>
               ))}
             </div>
 
-            <div className="pt-8 border-t border-white/20">
+            <div className="pt-8 border-t-2 border-ink/20">
               <a
                 href="#contact"
                 onClick={(e) => handleScrollTo(e, '#contact')}
-                className="w-full py-4 rounded-full bg-white text-black font-bold uppercase tracking-wider text-sm flex items-center justify-center gap-2 hover:bg-black hover:text-white transition-colors"
+                className="btn-secondary w-full !py-4"
               >
                 <span>Hire Me</span>
                 <ArrowUpRight className="w-4 h-4" />
               </a>
-              <p className="text-center text-xs text-white/70 mt-4 font-mono">
+              <p className="text-center text-xs text-ink/80 mt-4 font-medium">
                 atharvadesai727@gmail.com
                 <br />
                 +91 76667 51319

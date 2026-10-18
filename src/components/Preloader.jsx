@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
  * Preloader Component
  * Requirements:
  * - Fullscreen fixed overlay covering the entire viewport
- * - Background color: solid bright red (#ff2a2a)
+ * - Background: fullscreen looping video (public/intro-wall-video-2-landscape.mp4, 16:9, 5s), black fallback
  * - Centered logo text: "Atharva Desai."
  * - Bold, premium, black-weight typography with tight letter spacing
  * - Animation Sequence:
@@ -21,10 +21,10 @@ export default function Preloader({ onComplete }) {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    // Total sequence: 1.6s fill + 0.4s pause = 2.0s before shutter opens
+    // Hold for the full 5s video, then the shutter opens
     const timer = setTimeout(() => {
       setIsLoaded(true);
-    }, 2000);
+    }, 5000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -43,9 +43,19 @@ export default function Preloader({ onComplete }) {
               delay: 0.1 
             } 
           }}
-          className="fixed inset-0 z-[100000] flex items-center justify-center bg-[#ff2a2a] overflow-hidden"
-          style={{ backgroundColor: '#ff2a2a' }}
+          className="fixed inset-0 z-[100000] flex items-center justify-center bg-black overflow-hidden"
         >
+          {/* Background video: 16:9, 5s, plays once while the intro is shown */}
+          <video
+            className="absolute inset-0 h-full w-full object-cover pointer-events-none"
+            src={`${import.meta.env.BASE_URL}intro-wall-video-2-landscape.mp4`}
+            autoPlay
+            muted
+            playsInline
+            preload="auto"
+            aria-hidden="true"
+          />
+
           {/* Centered Logo Container */}
           <motion.div 
             className="relative select-none text-center px-4"

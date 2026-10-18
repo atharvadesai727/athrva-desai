@@ -19,13 +19,17 @@ export default function Brands() {
           alt={logo.alt}
           loading="lazy"
           draggable="false"
-          className="h-10 sm:h-14 w-auto max-w-none grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+          className="h-10 sm:h-14 w-auto max-w-none transition-transform duration-300 hover:scale-110"
         />
       </div>
     ));
 
   return (
-    <section id="brands" className="relative w-full bg-white text-black py-14 sm:py-20 overflow-hidden select-none">
+    // White band so the logo files (white backgrounds) blend in; runs edge to edge, no box
+    <section
+      id="brands"
+      className="relative w-full bg-white text-ink py-12 sm:py-16 border-y-2 border-ink overflow-hidden select-none"
+    >
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -33,8 +37,8 @@ export default function Brands() {
         transition={{ duration: 0.7 }}
         className="text-center px-6 mb-10 sm:mb-12"
       >
-        <span className="inline-flex items-center gap-2 text-[11px] sm:text-xs font-mono uppercase tracking-[0.3em] text-black/60">
-          <span className="w-2 h-2 rounded-full bg-[#FF2A2A]" />
+        <span className="section-badge !bg-sun">
+          <span className="w-2 h-2 rounded-full bg-accent" />
           Brands I've written for
         </span>
       </motion.div>
@@ -42,8 +46,8 @@ export default function Brands() {
       <div
         className="relative flex w-full"
         style={{
-          WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)',
-          maskImage: 'linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)',
+          WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)',
+          maskImage: 'linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)',
         }}
       >
         <div className="flex w-max items-center animate-marquee hover:[animation-play-state:paused]">

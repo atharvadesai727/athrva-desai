@@ -9,60 +9,63 @@
   }
 
   body {
-    background-color: #111111;
-    color: #f4f4f4;
+    background-color: #FFF4E0;
+    color: #1A1A1A;
     overflow-x: hidden;
   }
 }
 
-/* Custom Text Stroke Utilities */
+/* Outlined heading text (used on the dark hero video) */
 .text-stroke-white {
-  -webkit-text-stroke: 1.5px #ffffff;
-  color: transparent;
-  paint-order: stroke fill;
-  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.35));
-  transition: all 0.3s ease;
-}
-
-.text-stroke-white:hover {
-  -webkit-text-stroke: 1.5px #ffffff;
-  color: rgba(255, 255, 255, 0.2);
-}
-
-.text-stroke-black {
-  -webkit-text-stroke: 1.5px rgba(0, 0, 0, 0.9);
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.95);
   color: transparent;
   transition: all 0.3s ease;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.35);
 }
 
-/* Glassmorphism Classes */
-.glass-nav {
-  background: rgba(17, 17, 17, 0.7);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+@layer base {
+  h1, h2, h3 {
+    @apply font-display;
+  }
 }
 
-.glass-card {
-  background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+/* Shared building blocks so every section looks like the same site */
+@layer components {
+  .eyebrow {
+    @apply text-xs font-bold uppercase tracking-[0.2em] text-ink/70;
+  }
+  .section-badge {
+    @apply inline-flex items-center gap-2 px-4 py-1.5 rounded-full border-2 border-ink bg-white text-ink text-xs font-bold uppercase tracking-widest shadow-pop -rotate-2;
+  }
+  .section-title {
+    @apply font-display font-bold tracking-tight leading-tight text-ink;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full border-2 border-ink bg-sun text-ink font-bold text-xs sm:text-sm tracking-wider uppercase shadow-pop transition-all duration-200 hover:-translate-y-0.5 hover:shadow-pop-lg active:translate-x-0.5 active:translate-y-0.5 active:shadow-none;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full border-2 border-ink bg-white text-ink font-bold text-xs sm:text-sm tracking-wider uppercase shadow-pop transition-all duration-200 hover:-translate-y-0.5 hover:shadow-pop-lg active:translate-x-0.5 active:translate-y-0.5 active:shadow-none;
+  }
+  .card-surface {
+    @apply rounded-3xl border-2 border-ink bg-white shadow-pop;
+  }
 }
 
-.glass-pill {
-  background: rgba(255, 255, 255, 0.07);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+/* Soft polka-dot background */
+.bg-dots {
+  background-image: radial-gradient(rgba(26, 26, 26, 0.14) 1.5px, transparent 0);
+  background-size: 24px 24px;
 }
 
-/* Timeline Light Grid Pattern */
-.bg-grid-pattern {
-  background-size: 32px 32px;
-  background-image: 
-    linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-8deg); }
+  50% { transform: rotate(10deg); }
+}
+
+.animate-wiggle {
+  display: inline-block;
+  transform-origin: 70% 70%;
+  animation: wiggle 1.4s ease-in-out infinite;
 }
 
 /* Custom Water-Fill Effect keyframes helper */

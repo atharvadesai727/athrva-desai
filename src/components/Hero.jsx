@@ -84,14 +84,16 @@ export default function Hero() {
           {/* Action Buttons */}
           <div className="flex flex-wrap items-center gap-4">
             {/* Primary CTA */}
-            <motion.button
+            <motion.a
+              href="https://drive.google.com/drive/folders/1sX8316MobQxdLL7-Gy2r5P8PJ-jwjkb5?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.96 }}
-              onClick={() => handleScrollTo('#process')}
               className="btn-primary"
             >
               View My Work
-            </motion.button>
+            </motion.a>
 
             {/* Secondary CTA */}
             <motion.button

@@ -15,12 +15,6 @@ export default function Footer() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const handleScrollToWork = (e) => {
-    e.preventDefault();
-    const el = document.querySelector('#process');
-    if (el) el.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
     <footer 
       id="contact"
@@ -55,8 +49,9 @@ export default function Footer() {
               Copywriter
             </p>
             <a
-              href="#process"
-              onClick={handleScrollToWork}
+              href="https://drive.google.com/drive/folders/1sX8316MobQxdLL7-Gy2r5P8PJ-jwjkb5?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group inline-flex items-center gap-1.5 text-sm font-semibold uppercase tracking-wider text-white hover:text-sun transition-colors relative"
             >
               <span>View Work</span>

@@ -35,13 +35,13 @@ export default function Preloader({ onComplete }) {
         <motion.div
           key="preloader-overlay"
           initial={{ y: 0 }}
-          exit={{ 
-            y: '-100%', 
-            transition: { 
-              duration: 1.0, 
+          exit={{
+            y: '-100%',
+            transition: {
+              duration: 1.0,
               ease: [0.76, 0, 0.24, 1],
-              delay: 0.1 
-            } 
+              delay: 0.1
+            }
           }}
           className="fixed inset-0 z-[100000] flex items-center justify-center bg-black overflow-hidden"
         >
@@ -57,17 +57,17 @@ export default function Preloader({ onComplete }) {
           />
 
           {/* Centered Logo Container */}
-          <motion.div 
+          <motion.div
             className="relative select-none text-center px-4"
-            exit={{ 
-              scale: 0.9, 
-              opacity: 0, 
-              transition: { duration: 0.6, ease: [0.76, 0, 0.24, 1] } 
+            exit={{
+              scale: 0.9,
+              opacity: 0,
+              transition: { duration: 0.6, ease: [0.76, 0, 0.24, 1] }
             }}
           >
             {/* Layer 1: Dark Transparent Background Layer */}
             <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tighter text-black/20 font-sans uppercase">
-              Atharva Desai.
+              Welcome to my creative cosmos
             </h1>
 
             {/* Layer 2: White Foreground Layer with Bottom-to-Top Water Fill */}
@@ -81,7 +81,7 @@ export default function Preloader({ onComplete }) {
               }}
               className="absolute inset-0 flex items-center justify-center text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tighter text-white font-sans uppercase pointer-events-none"
             >
-              Atharva Desai.
+              Welcome to my creative cosmos
             </motion.h1>
           </motion.div>
         </motion.div>

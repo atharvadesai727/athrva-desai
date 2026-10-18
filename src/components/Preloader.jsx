@@ -43,7 +43,7 @@ export default function Preloader({ onComplete }) {
               delay: 0.1
             }
           }}
-          className="fixed inset-0 z-[100000] flex items-center justify-center bg-black overflow-hidden"
+          className="fixed inset-0 z-[100000] flex items-end justify-center bg-black overflow-hidden pb-[12vh] sm:pb-[14vh]"
         >
           {/* Background video: 16:9, 5s, plays once while the intro is shown */}
           <video
@@ -56,9 +56,12 @@ export default function Preloader({ onComplete }) {
             aria-hidden="true"
           />
 
-          {/* Centered Logo Container */}
+          {/* Soft bottom scrim so the text stays readable over the video */}
+          <div className="absolute inset-x-0 bottom-0 h-3/5 bg-gradient-to-t from-black/60 via-black/25 to-transparent pointer-events-none" />
+
+          {/* Logo container, anchored toward the bottom */}
           <motion.div
-            className="relative select-none text-center px-4"
+            className="relative select-none text-center px-6 w-full max-w-5xl"
             exit={{
               scale: 0.9,
               opacity: 0,
@@ -66,7 +69,7 @@ export default function Preloader({ onComplete }) {
             }}
           >
             {/* Layer 1: Dark Transparent Background Layer */}
-            <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tighter text-black/20 font-sans uppercase">
+            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[1.02] font-sans uppercase text-white/25 drop-shadow-[0_4px_18px_rgba(0,0,0,0.55)]">
               Welcome to my creative cosmos
             </h1>
 
@@ -79,7 +82,7 @@ export default function Preloader({ onComplete }) {
                 ease: [0.76, 0, 0.24, 1],
                 delay: 0.2
               }}
-              className="absolute inset-0 flex items-center justify-center text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tighter text-white font-sans uppercase pointer-events-none"
+              className="absolute inset-0 text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[1.02] font-sans uppercase text-white drop-shadow-[0_4px_14px_rgba(0,0,0,0.6)] pointer-events-none"
             >
               Welcome to my creative cosmos
             </motion.h1>

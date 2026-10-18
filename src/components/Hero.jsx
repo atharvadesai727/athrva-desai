@@ -78,7 +78,7 @@ export default function Hero() {
 
           {/* Subheading */}
           <p className="text-base sm:text-lg text-white font-medium leading-relaxed mb-8 max-w-xl">
-            Words that work. Ads, website copy, and bios written to connect and convert.
+            “In a universe full of noise, I write words that pull you in.”
           </p>
 
           {/* Action Buttons */}

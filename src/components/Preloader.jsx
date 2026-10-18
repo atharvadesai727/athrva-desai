@@ -43,7 +43,7 @@ export default function Preloader({ onComplete }) {
               delay: 0.1
             }
           }}
-          className="fixed inset-0 z-[100000] flex items-end justify-center bg-black overflow-hidden pb-[12vh] sm:pb-[14vh]"
+          className="fixed inset-0 z-[100000] flex items-center justify-center bg-black overflow-hidden"
         >
           {/* Background video: 16:9, 5s, plays once while the intro is shown */}
           <video
@@ -56,8 +56,8 @@ export default function Preloader({ onComplete }) {
             aria-hidden="true"
           />
 
-          {/* Soft bottom scrim so the text stays readable over the video */}
-          <div className="absolute inset-x-0 bottom-0 h-3/5 bg-gradient-to-t from-black/60 via-black/25 to-transparent pointer-events-none" />
+          {/* Soft center scrim so the text stays readable over the video */}
+          <div className="absolute inset-0 bg-black/25 pointer-events-none" />
 
           {/* Logo container, anchored toward the bottom */}
           <motion.div
